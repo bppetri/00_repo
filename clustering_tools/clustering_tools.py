@@ -1,5 +1,9 @@
 """This script contains clustering tools useful for the first assignment in the course"""
 
+# TODO: a nem haszbnált importokat vedd ki
+#  Ezt pl a PyCharm megteszi neked automatikusan, ha használod az Optimize Importsot
+# TODO: az ipynb checkpoints mappa ne legyen része a repónak!
+#  Ezt így csináld meg: https://stackoverflow.com/questions/343646/ignoring-directories-in-git-repositories-on-windows
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -21,6 +25,7 @@ def load_ski_resorts_data(data_path: str):
 
 
 def create_boxplot_for_feature_group(feature_group, group_name, inputData):
+    # TODO: docstring
     fig, axs = plt.subplots(1, len(feature_group), figsize=(len(feature_group) * 5, 5))
 
     inputData[feature_group + ["CLUSTERING_1"]].boxplot(by="CLUSTERING_1", ax=axs)
