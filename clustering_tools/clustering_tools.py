@@ -59,4 +59,4 @@ def perform_PCA(input_data, n_components):
     """Return a decorrelated dataframe"""
     pca = PCA(n_components=n_components)
     input_data_pca = pca.fit_transform(input_data.values)
-    return input_data_pca, input_data_pca
+    return input_data_pca, pca
